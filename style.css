@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3 {
+    cursor: default;
+}
+
+a {
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 2.75rem;
+}
+
+.sitenameContainer {
+    width: 12%;
+    margin: 0.5rem 2.75rem;
+}
+
+.sitenameContainer .st0{
+    fill:#0C0C0C;
+}
+.sitenameContainer .st1{
+    fill:#56AC2E;
+}
+
+.ytchannelInfoContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0.5rem 2.75rem;
+}
+
+p.ytchannelTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.contenderContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin: 4rem 7rem 0;
+}
+
+.contenderCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+}
+
+.imgContainer {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}
+.imgContainer img {
+    width: 100%;
+}
+
+.eliminateSymbol {
+    z-index: 1;
+    transform: translateY(-100%) scale(1.05);
+}
+.eliminateSymbol .st0 {
+    opacity: 0.21;
+}
+
+.nameContender {
+    font-family: 'Permanent Marker';
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sociallinkContender {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sociallinkContender svg {
+    width: 2rem;
+}
+
+
+.videoContent {
+    gap: 4rem;
+    margin: 4rem 7rem 5rem;
+}
+
+h2.titleVideocontent {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.videoCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.videoCard {
+    width: calc(100% / 3 - 100% * 0.05);
+}
+
+.videoTitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.videoDatetime {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+.videoDiedname {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
+    background-color: khaki;
+    padding: 1rem 0 0.75rem;
+}
