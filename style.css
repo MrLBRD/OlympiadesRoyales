@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
+body {
+    --spoilbtn-width-switch: 2.5rem;
+    --spoilbtn-height-switch: 1.25rem;
+    --spoilbtn-size-slider: 1.0rem;
+    --spoilbtn-pos-slider: 0.15rem;
+    --spoilbtn-size-translate: 1.2rem;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -27,6 +35,16 @@ a {
     margin: 0.5rem 2.75rem;
 }
 
+.sitenameContainer svg {
+    width: 12rem;
+}
+
+@media (max-width: 720px) {
+    .sitenameContainer svg {
+        width: 8rem;
+    }
+}
+
 .sitenameContainer .st0{
     fill:#0C0C0C;
 }
@@ -45,6 +63,70 @@ p.ytchannelTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
     margin-right: 0.5rem;
+}
+
+#spoilMode {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 8rem;
+}
+
+#spoilMode p {
+    margin-right: 0.5rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: var(--spoilbtn-width-switch);
+    height: var(--spoilbtn-height-switch);
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--spoilbtn-height-switch);
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: var(--spoilbtn-size-slider);
+    width: var(--spoilbtn-size-slider);
+    left: var(--spoilbtn-pos-slider);
+    bottom: var(--spoilbtn-pos-slider);
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #f32121;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #f32121;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(var(--spoilbtn-size-translate));
+    -ms-transform: translateX(var(--spoilbtn-size-translate));
+    transform: translateX(var(--spoilbtn-size-translate));
 }
 
 .contenderContainer {
@@ -98,7 +180,6 @@ p.ytchannelTitle {
 .sociallinkContender svg {
     width: 2rem;
 }
-
 
 .videoContent {
     gap: 4rem;

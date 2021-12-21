@@ -74,6 +74,14 @@
         </div>
     </div>
 
+    <div id="spoilMode">
+        <p>Activer le spoil :</p>
+        <label class="switch">
+            <input type="checkbox" id="spoilCheck" onchange="createContenderCard(),changeRandomName()">
+            <span class="slider"></span>
+        </label>
+    </div>
+
     <div class="contenderContainer" id="contenderContainer"></div>
 
     
@@ -85,7 +93,7 @@
                 <div>
                     <p class="videoTitle">⚾️ Pétanque Royal : le moins adroit quitte les Olympiades</p>
                     <p class="videoDatetime">20 déc. 2021</p>
-                    <p class="videoDiedname">Eliminé(e) : ???? (no spoil)</p>
+                    <p class="videoDiedname">Eliminé(e) : <span class="randomName"></span><span class="nameDead">Benjamin</span></p>
                 </div>
             </div>
             <div class="videoCard">
@@ -93,7 +101,7 @@
                 <div>
                     <p class="videoTitle">🧾 Petit bac Royal : le moins créatif quitte l'aventure</p>
                     <p class="videoDatetime">15 déc. 2021</p>
-                    <p class="videoDiedname">Eliminée : Luane</p>
+                    <p class="videoDiedname">Eliminé(e) : <span class="randomName"></span><span class="nameDead">Luane</span></p>
                 </div>
             </div>
             <div class="videoCard">
@@ -101,7 +109,7 @@
                 <div>
                     <p class="videoTitle">🍔 Uber Eats Royal : le dernier livré est éliminé</p>
                     <p class="videoDatetime">12 déc. 2021</p>
-                    <p class="videoDiedname">Eliminé : Lucas Studio</p>
+                    <p class="videoDiedname">Eliminé(e) : <span class="randomName"></span><span class="nameDead">Lucas Studio</span></p>
                 </div>
             </div>
         </div>
