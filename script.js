@@ -24,7 +24,7 @@ const Contenders = [{
         instagram: 'https://www.instagram.com/alaiajeanneau/',
         tiktok: 'https://www.tiktok.com/@alaiajeanneau',
     },
-    statut: true,
+    statut: false,
 },{
     name: 'Anthony Lastella',
     img: 'anthonylastella.jpg',
@@ -50,7 +50,7 @@ const Contenders = [{
         instagram: 'https://www.instagram.com/l.au.carre/',
         tiktok: 'https://www.tiktok.com/@l.au.carre_officiel',
     },
-    statut: true,
+    statut: false,
 },{
     name: 'Luane',
     img: 'luane.jpg',
@@ -121,7 +121,16 @@ let videoCards = document.querySelectorAll('iframe.JS-iframeSize')
 
 function sizeVideoFrame() {
     let widthParent = videocardContainer.offsetWidth
-    let widthIframe = widthParent/3 - widthParent*0.05
+    if(widthParent < (1080 - 224)){
+        if(widthParent < (870 - 88)){
+            nbCard = 1
+        } else {
+            nbCard = 2
+        }
+    } else {
+        nbCard = 3
+    }
+    let widthIframe = widthParent/nbCard - widthParent*0.05
     let heightIframe = widthIframe*0.5625
     videoCards.forEach(el => {
         el.style="width:"+widthIframe+"px; height:"+heightIframe+"px;"
@@ -133,7 +142,6 @@ let chars = ['㋿','㌀','㌁','㌂','㌃','㌄','㌅','㌆','㌇','㌈','㌉','
 
 let randomDeadGuys = document.querySelectorAll('.videoDiedname>span.randomName')
 let nameDeadGuys = document.querySelectorAll('.videoDiedname>span.nameDead')
-console.log(randomDeadGuys, nameDeadGuys)
 let changeRandomName = function () {
     if(!spoilCheck.checked){
         nameDeadGuys.forEach(el => {
