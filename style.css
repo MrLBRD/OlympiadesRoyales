@@ -207,7 +207,7 @@ input:checked + .slider:before {
     transform: translateY(-100%) scale(1.05);
 }
 .eliminateSymbol .st0 {
-    opacity: 0.21;
+    opacity: 0.45;
 }
 
 .nameContender {

@@ -81,7 +81,7 @@ const Contenders = [{
         youtube: 'https://www.youtube.com/c/Souby',
         instagram: 'https://www.instagram.com/alexandresbd_/',
     },
-    statut: true,
+    statut: false,
 }]
 
 let spoilCheck = document.getElementById('spoilCheck')
